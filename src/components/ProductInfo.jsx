@@ -12,10 +12,6 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
   const isAdmin = localStorage.getItem("isAdmin") === "true";
   const isAuth = localStorage.getItem("isAuth");
   const handleDelete = async () => {
-      if (!isAuth || isAuth === "false") {
-    alert("You are not registered!");
-    return;
-
     try {
       const response = await axiosInstance.delete("/Product", {
         params: { id },
@@ -35,6 +31,10 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
   };
 
   const handleAddCart = async () => {
+         if (!isAuth || isAuth === "false") {
+            alert("You are not registered!");
+            return;
+         }
     try {
       const payload = {
         productId: id,
