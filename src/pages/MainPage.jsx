@@ -2,6 +2,8 @@ import { Container, Box, Typography, Button,Modal } from "@mui/material";
 import { Link } from "react-router-dom";
 import { CATAlOG_PAGE } from "../utils/consts";
 import React from "react";
+import mainLaptopsImg from "../assets/img/mainlaptops.png";
+import deliveryImg from "../assets/img/delivery.png";
 export default function MainPage() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -48,14 +50,14 @@ export default function MainPage() {
               </Link>
             </Box>
             <Box>
-              <img src="src\assets\img\mainlaptops.png" alt="Laptop" />
+              <img src={mainLaptopsImg} alt="Laptop" />
             </Box>
           </Box>
           <Box>
             <Box sx={{ display: "flex", paddingTop: 16, columnGap: "12",justifyContent:"space-between" }}>
               <Box>
                 <img
-                  src="src\assets\img\delivery.png"
+                  src={deliveryImg}
                   alt="delivery"
                   className="delivery-image"
                 />
