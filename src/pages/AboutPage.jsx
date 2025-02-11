@@ -1,6 +1,6 @@
 import { Box } from "@mui/joy";
 import { Container, Typography } from "@mui/material";
-import aboutImage from "../assets/img/bouts.jpg";
+import aboutImage from "../assets/img/abouts.jpg";
 export default function AboutPage(){
     return(
         <Container sx={{display:"flex", justifyContent:"center", alignItems:"center", width:"100%", height:"100vh"}}>
