@@ -10,8 +10,12 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
   const userId = localStorage.getItem("userId");
   const [loading, setLoading] = useState(false);
   const isAdmin = localStorage.getItem("isAdmin") === "true";
-
+  const isAuth = localStorage.getItem("isAuth");
   const handleDelete = async () => {
+      if (!isAuth || isAuth === "false") {
+    alert("You are not registered!");
+    return;
+
     try {
       const response = await axiosInstance.delete("/Product", {
         params: { id },
