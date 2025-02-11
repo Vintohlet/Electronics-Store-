@@ -1,5 +1,5 @@
 import { Box,Container,Typography } from "@mui/material"
-import catalogImage from "../assets/img/header_catalog.jpg"
+import catalogImage from "../../assets/img/header_catalog.jpg"
 export default function CatalogDecor(){
     return(<>
         <Box>
