@@ -1,9 +1,10 @@
 import { Box,Container,Typography } from "@mui/material"
+import catalogImage from "../assets/img/header_catalog.jpg"
 export default function CatalogDecor(){
     return(<>
         <Box>
         <img
-          src="src\assets\img\header_catalog.jpg"
+          src={catalogImage}
           alt="samsung"
           className="catalog_image"
         />
