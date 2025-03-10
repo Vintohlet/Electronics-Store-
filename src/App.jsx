@@ -5,7 +5,8 @@ import "./assets/styles/style.css";
 function App() {
   return (
     <>
-   <Layout>
+ 
+    <Layout>
       <AppRouter />
     </Layout>
     </>

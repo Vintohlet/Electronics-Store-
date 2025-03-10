@@ -12,3 +12,18 @@
     border-radius: 12px;
     box-shadow: 0px 1.375px 1.935px -0.875px rgba(0,0,0,0.2), 0px 3px 4.749px 0.375px rgba(0,0,0,0.14), 0px 1.125px 5.748px 1.000px rgba(0,0,0,0.12);
 }
+@media only screen and (max-width:1030px) {
+  .catalog__container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width:800px) {
+  .catalog__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width:600px) {
+  .catalog__container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

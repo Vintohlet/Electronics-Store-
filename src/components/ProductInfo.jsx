@@ -3,7 +3,7 @@ import { BsCart2 } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { axiosInstance } from "../services/axios";
 import { useNavigate } from "react-router-dom";
-import { CircularProgress } from "@mui/joy";
+import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 export default function ProductInfo({ imageUrl, title, price, charct, id, quantity }) {
   const navigate = useNavigate();
@@ -66,6 +66,7 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
               backgroundColor: "white",
               display: "flex",
               justifyContent: "center",
+              flexDirection:{xs:"column", lg:"row"},
               gap: 8,
               py: 4,
               px: 4,
@@ -77,8 +78,10 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "flex-start",
-                width: "520px",
+                justifyContent: {custom:"flex-start", xs:"center"},
+                textAlign:{xs:"center"},
+                maxWidth: "520px",
+                alignSelf:"center"
               }}
             >
               <Typography variant="h4" sx={{ fontWeight: "500", py: 4 }}>
@@ -115,7 +118,7 @@ export default function ProductInfo({ imageUrl, title, price, charct, id, quanti
         </Paper>
         <Paper elevation={6} sx={{ my: 8 }}>
           <Box sx={{ backgroundColor: "white", py: 4, px: 4, borderRadius: 3 }}>
-            <Typography variant="h2" sx={{ fontWeight: "700", py: 4 }}>
+            <Typography variant="h3" sx={{ fontWeight: "700", py: 4, fontSize:"32px"}}>
               Characteristics
             </Typography>
             <ul className="product__items">

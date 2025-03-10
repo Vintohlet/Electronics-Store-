@@ -1,6 +1,6 @@
 .delivery-image {
-  width: 600px;
-  height: 440px;
+  width: 100%;
+  height: auto;
 }
 .link {
   text-decoration: none;
@@ -18,3 +18,14 @@
   background-color: rgb(244, 244, 244);
   height: 100%;
 }
+.laptop_image{
+  width: 100%;
+  max-width: 576px;
+  height: auto;
+
+}
+/* @media only screen and (max-width:1060px) {
+  .laptop_image{
+    max-width: 500px;
+  }
+} */

@@ -18,9 +18,11 @@ export default function CatalogDecor(){
             alignItems: "center",
           }}
         >
-          <Typography variant="h2" sx={{ fontWeight: "700" }}>
+          <Box sx={{display:{xs:"flex"}, justifyContent:{xs:"center"}, textAlign:{xs:"center"}}}>
+          <Typography variant="h3" sx={{ fontWeight: "700" }}>
             Product Catalog
           </Typography>
+          </Box>
         </Box>
       </Container>
       </>

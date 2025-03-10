@@ -1,12 +1,16 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Card} from "@mui/material";
 
 export default function OrderItem({ orderItems = [], total, createdAt }) {
   return (
+    <Card sx={{"&:hover": {
+          elevation: 6,
+        }, mt:6}}>
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection:{xs:"column", md:"row"},
+        justifyContent: {md:"space-between", xs:"center"},
         py: 6,
         px: 4,
       }}
@@ -22,8 +26,9 @@ export default function OrderItem({ orderItems = [], total, createdAt }) {
           <li className="order__item">Нет товаров</li>
         )}
       </ul>
-      <Typography sx={{ fontWeight: "600", fontSize: "24px" }}>{total}₸</Typography>
-      <Typography sx={{ fontWeight: "600", fontSize: "18px" }}>{createdAt}🕒</Typography>
+      <Typography sx={{ fontWeight: "600", fontSize: "24px", mt:{xs:2, md:0}, justifyContent:"center"}}>{total}₸</Typography>
+      <Typography sx={{ fontWeight: "600", fontSize: "18px",  mt:{xs:2, md:0} ,justifyContent:"center"}}>{createdAt}🕒</Typography>
     </Box>
+    </Card>
   );
 }

@@ -57,12 +57,13 @@ export default function CartItem({ title, price, id, onDelete, itemQuantity, onQ
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          flexDirection:{xs:"column"},
+          justifyContent: {md:"space-between", xs:"center"},
           py: 6,
           px: 4,
         }}
       >
-        <Typography sx={{ fontSize: "24px", fontWeight: "500" }}>
+        <Typography sx={{ fontSize: "24px", fontWeight: "500", textAlign:{xs:"center"} }}>
           {title}
         </Typography>
         <Box sx={{ alignItems: "center", textAlign: "center" }}>
